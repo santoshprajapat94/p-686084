@@ -55,7 +55,7 @@ export const Features = () => {
   ];
 
   return (
-    <section className="self-stretch flex min-h-[321px] w-full gap-[25px] flex-wrap mt-[91px] max-md:max-w-full max-md:mt-10">
+    <section style={{margin:'30px 0 20px 0'}} className="self-stretch flex min-h-[321px] w-full gap-4 px-16 flex-wrap max-md:max-w-full max-md:mt-10">
       {features.map((feature, index) => (
         <FeatureCard key={index} {...feature} />
       ))}

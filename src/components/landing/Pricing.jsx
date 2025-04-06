@@ -1,9 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 
 export const Pricing = () => {
   return (
-    <section className="bg-[rgba(213,245,244,1)] flex w-full flex-col items-stretch mt-[68px] pt-20 pb-[259px] px-[3px] max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:pb-[100px]">
+    <section className="bg-[rgba(213,245,244,1)] flex w-full flex-col items-stretch mt-[68px] pb-[50px] pt-20 px-[3px] max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:pb-[100px]">
       <div className="self-center max-w-full w-[1430px] text-slate-900 text-center">
         <h2 className="w-full text-[56px] font-extrabold leading-[1.1] max-md:max-w-full max-md:text-[40px]">
           <span className="text-black">Use</span>
@@ -32,19 +31,19 @@ export const Pricing = () => {
         </div>
         <div className="self-stretch flex min-w-60 flex-col items-center text-black grow shrink w-[700px] my-auto max-md:max-w-full">
           <div className="w-[727px] max-w-full">
-            <h3 className="text-4xl font-bold leading-[1.6] max-md:max-w-full">
+            <h3 className="text-xl font-bold leading-[1.6] max-md:max-w-full">
               How You Get Care Credits
             </h3>
-            <p className="text-[32px] font-normal leading-[51px] mt-[22px] max-md:max-w-full">
+            <p className="text-[18px] font-normal leading-[51px] mt-[22px] max-md:max-w-full">
               Purchase credits directly in the app .<br />
               No subscriptions or auto-renewals — buy only what you need
             </p>
           </div>
           <div className="w-[727px] max-w-full font-bold mt-[25px]">
-            <h3 className="text-4xl leading-[1.6] max-md:max-w-full">
+            <h3 className="text-xl leading-[1.6] max-md:max-w-full">
               What Credits Unlock
             </h3>
-            <ul className="text-[32px] leading-[51px] mt-[22px] max-md:max-w-full">
+            <ul className="text-[18px] leading-[51px] mt-[22px] max-md:max-w-full">
               <li>
                 AI Reports
                 <span className="font-normal">
@@ -65,10 +64,10 @@ export const Pricing = () => {
             </ul>
           </div>
           <div className="w-[727px] max-w-full mt-[25px]">
-            <h3 className="text-4xl font-bold leading-[1.6] max-md:max-w-full">
+            <h3 className="text-xl font-bold leading-[1.6] max-md:max-w-full">
               How It Works
             </h3>
-            <p className="text-[32px] font-normal leading-[51px] mt-[22px] max-md:max-w-full">
+            <p className="text-[18px] font-normal leading-[51px] mt-[22px] max-md:max-w-full">
               Start for free — log all your health data at no cost
               <br />
               When you need to run a report or share data, you'll see the number
@@ -80,12 +79,23 @@ export const Pricing = () => {
               records for free.
             </p>
           </div>
+          <div style={{display:'flex',alignItems:'flex-start'}}>
+            <Button
+              style={{
+                margin: "16px 0",
+                padding: "16px 8px",
+                minWidth: "150px",
+                maxWidth: "200px",
+                transition: "all 0.3s ease",
+              }}
+              className="bg-[rgba(0,151,178,1)] text-[22px] font-medium rounded-[40px] hover:bg-[rgba(0,151,178,0.8)]"
+              size="lg"
+            >
+              Get started
+            </Button>
+          </div>
         </div>
       </div>
-
-      <Button className="justify-center items-stretch bg-[#009BC4] self-center z-10 mt-[-259px] w-[225px] max-w-full text-2xl text-white font-bold tracking-[0.5px] leading-none ml-[29px] px-6 py-[23px] rounded-lg border-2 border-solid max-md:mt-[-200px] max-md:px-5">
-        Get Started
-      </Button>
     </section>
   );
 };

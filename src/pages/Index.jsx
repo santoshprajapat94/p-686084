@@ -5,20 +5,19 @@ import { WhatIs } from "@/components/landing/WhatIs";
 import { Pricing } from "@/components/landing/Pricing";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Footer } from "@/components/landing/Footer";
-import { HowItWorks } from "@/components/landing/HowItWorks";
-import { FAQ } from "@/components/landing/FAQ";
+import "../components/landing/FeatureSection.css";
+import FeatureSection from "../components/landing/FeatureSection";
 
 const Index = () => {
   return (
-    <div className="bg-white flex flex-col overflow-hidden items-stretch pt-[39px] pb-[81px]">
+    <div className="bg-white flex flex-col overflow-hidden items-stretch">
       <Hero />
       <Features />
       <WhatIs />
-      <HowItWorks />
+      <FeatureSection/>
       <Pricing />
       <Testimonials />
-      <FAQ />
-      <Footer />
+      <Footer/>
     </div>
   );
 };

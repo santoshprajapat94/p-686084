@@ -7,7 +7,7 @@ interface TestimonialProps {
 const Testimonial = ({ title, content, author }: TestimonialProps) => (
   <div className="self-stretch min-w-60 grow shrink w-60 my-auto">
     <div className="bg-[rgba(253,192,149,1)] min-h-[226px] w-full text-[rgba(68,68,68,1)] leading-6">
-      <h3 className="text-xl font-bold">{title}</h3>
+      <h3 className="text-4xl font-bold">{title}</h3>
       <p className="text-base font-medium mt-5">{content}</p>
     </div>
     <div className="bg-[rgba(253,192,149,1)] flex min-h-[71px] w-full flex-col items-stretch">

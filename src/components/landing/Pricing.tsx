@@ -1,90 +1,122 @@
 import { Button } from "@/components/ui/button";
 
+const SectionTitle = ({ title, subtitle }) => (
+  <div className="text-center max-w-[1430px] mx-auto text-slate-900 px-4">
+    <h2 className="text-[34px] font-semibold leading-[48px] max-md:text-[28px] max-md:leading-[38px]">
+      {title}
+    </h2>
+    <p className="mt-4 text-[18px] font-normal text-slate-800 max-md:text-[16px]">
+      {subtitle}
+    </p>
+  </div>
+);
+
+const FeatureBlock = ({ title, content }) => (
+  <div className="w-full max-w-[727px] mt-8">
+    <h3 className="text-lg font-semibold mb-2 text-slate-900">{title}</h3>
+    <div className="text-[18px] normal-text leading-relaxed text-slate-800">
+      {content}
+    </div>
+  </div>
+);
+
 export const Pricing = () => {
   return (
-    <section className="bg-[rgba(213,245,244,1)] flex w-full flex-col items-stretch mt-[68px] pt-20 pb-[259px] px-[3px] max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:pb-[100px]">
-      <div className="self-center max-w-full w-[1430px] text-slate-900 text-center">
-        <h2 className="w-full text-[56px] font-extrabold leading-[1.1] max-md:max-w-full max-md:text-[40px]">
-          <span className="text-black">Use</span>
-          <span className="text-[#F38759]"> Rx</span>
-          <span className="text-[#34B6B3]">Pod</span> Free — Add Credits When
-          You Need More.
-        </h2>
-        <p className="text-lg font-normal leading-[29px] mt-6 max-md:max-w-full">
-          RX Pod is free to use for logging your health — no fees, no
-          subscriptions. But when you're ready for more advanced features, you
-          just add Care Credits —{" "}
-          <span className="font-semibold">
-            our flexible, pay-as-you-go system
-          </span>
-          .
-        </p>
-      </div>
+    <section className="bg-[rgba(213,245,244,1)] py-20 px-6 md:px-10 mt-[68px] max-md:mt-10">
+      <SectionTitle
+        title={
+          <>
+            <span className="text-black">Use</span>{" "}
+            <span className="text-[#F38759]">Rx</span>{" "}
+            <span className="text-[#34B6B3]">Pod</span> Free — Add Credits When
+            You Need More.
+          </>
+        }
+        subtitle={
+          <>
+            RX Pod is free to use for logging your health — no fees, no
+            subscriptions. But when you're ready for more advanced features, you
+            just add Care Credits —{" "}
+            <span className="font-semibold">our flexible, pay-as-you-go system</span>.
+          </>
+        }
+      />
 
-      <div className="flex w-full items-center gap-[40px_61px] flex-wrap pl-[30px] pr-[9px] py-[33px] max-md:max-w-full max-md:pl-5">
-        <div className="self-stretch flex min-w-60 h-[433px] items-center gap-2.5 justify-center grow shrink w-[358px] my-auto max-md:max-w-full">
+      <div className="flex flex-wrap-reverse md:flex-nowrap justify-center gap-10 mt-14">
+        {/* Text Content */}
+        <div className="flex flex-col justify-start items-start w-full max-w-[727px]">
+          <FeatureBlock
+            title="How You Get Care Credits"
+            content={
+              <>
+                <p>Purchase credits directly in the app.</p>
+                <p>No subscriptions or auto-renewals — buy only what you need.</p>
+              </>
+            }
+          />
+
+          <FeatureBlock
+            title="What Credits Unlock"
+            content={
+              <ul className="list-disc list-inside space-y-2 text-[18px]">
+                <li>
+                  AI Reports{" "}
+                  <span className="font-normal text-base text-slate-700">
+                    (e.g. drug interaction or health optimization reviews)
+                  </span>
+                </li>
+                <li>
+                  Secure Data Sharing{" "}
+                  <span className="font-normal text-base text-slate-700">
+                    with doctors or caregivers
+                  </span>
+                </li>
+                <li>
+                  Advanced Insights{" "}
+                  <span className="font-normal text-base text-slate-700">
+                    based on your health profile
+                  </span>
+                </li>
+              </ul>
+            }
+          />
+
+          <FeatureBlock
+            title="How It Works"
+            content={
+              <>
+                <p>Start for free — log all your health data at no cost.</p>
+                <p>
+                  When you need to run a report or share data, you'll see the
+                  number of credits required.
+                </p>
+                <p>
+                  Tap "Add Credits" to purchase instantly — then use them
+                  anytime.
+                </p>
+                <p>
+                  No credits = no problem. You can still access your personal
+                  records for free.
+                </p>
+              </>
+            }
+          />
+
+          {/* Button aligned after all content */}
+          <Button className="mt-8 text-white bg-[#34B6B3] hover:bg-[#2aa3a0]">
+            Add Credits
+          </Button>
+        </div>
+
+        {/* Image */}
+        <div className="flex justify-center items-center w-full max-w-[601px]">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/65b1b28c316d0ac5d00e78c3e2469aeb83c35a18?placeholderIfAbsent=true"
+            src="/hero/left-mobile.png"
             alt="Care Credits Illustration"
-            className="aspect-[0.91] object-contain w-[601px] self-stretch min-w-60 my-auto"
+            className="w-full h-auto object-contain"
           />
         </div>
-        <div className="self-stretch flex min-w-60 flex-col items-center text-black grow shrink w-[700px] my-auto max-md:max-w-full">
-          <div className="w-[727px] max-w-full">
-            <h3 className="text-4xl font-bold leading-[1.6] max-md:max-w-full">
-              How You Get Care Credits
-            </h3>
-            <p className="text-[32px] font-normal leading-[51px] mt-[22px] max-md:max-w-full">
-              Purchase credits directly in the app .<br />
-              No subscriptions or auto-renewals — buy only what you need
-            </p>
-          </div>
-          <div className="w-[727px] max-w-full font-bold mt-[25px]">
-            <h3 className="text-4xl leading-[1.6] max-md:max-w-full">
-              What Credits Unlock
-            </h3>
-            <ul className="text-[32px] leading-[51px] mt-[22px] max-md:max-w-full">
-              <li>
-                AI Reports
-                <span className="font-normal">
-                  {" "}
-                  (e.g. drug interaction or health optimization reviews)
-                </span>
-              </li>
-              <li>
-                Secure Data Sharing
-                <span className="font-normal"> with doctors or caregivers</span>
-              </li>
-              <li>
-                Advanced Insights{" "}
-                <span className="font-normal">
-                  based on your health profile
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div className="w-[727px] max-w-full mt-[25px]">
-            <h3 className="text-4xl font-bold leading-[1.6] max-md:max-w-full">
-              How It Works
-            </h3>
-            <p className="text-[32px] font-normal leading-[51px] mt-[22px] max-md:max-w-full">
-              Start for free — log all your health data at no cost
-              <br />
-              When you need to run a report or share data, you'll see the number
-              of credits required
-              <br />
-              Tap "Add Credits" to purchase instantly — then use them anytime
-              <br />
-              No credits = no problem. You can still access your personal
-              records for free.
-            </p>
-          </div>
-        </div>
       </div>
-
-      <Button className="justify-center items-stretch bg-[#009BC4] self-center z-10 mt-[-259px] w-[225px] max-w-full text-2xl text-white font-bold tracking-[0.5px] leading-none ml-[29px] px-6 py-[23px] rounded-lg border-2 border-solid max-md:mt-[-200px] max-md:px-5">
-        Get Started
-      </Button>
     </section>
   );
 };
